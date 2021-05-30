@@ -1,0 +1,33 @@
+{% extends 'base.html' %}   
+{% import 'bootstrap/wtf.html' as wtf %}
+
+{% block app_content %}
+<h1>Edit Your Profile</h1>
+{#<form action='' method='POST'>
+	{{form.hidden_tag()}}
+<p>
+	{{form.username.label}}<br>
+	{{form.username(size=32)}}
+	{% for error in form.username.errors %}
+	<span style="color: red">[{{error}}]</span>
+	{% endfor %}
+</p>
+<p>
+	{{form.about_me.label}}<br>
+	{{form.about_me(size=32)}}
+	{% for error in form.username.errors %}
+	<span style="color: red">[{{error}}]</span>
+	{% endfor %}
+</p>
+<p>
+	{{form.submit()}}
+</p>
+</form>#}
+
+<div class="row">
+	<div class="col-md-4">
+		{{ wtf.quick_form(form) }}
+	</div>
+</div>
+
+{% endblock app_content %}

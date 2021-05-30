@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+{% block app_content %}
+<h1>Login</h1>
+
+{#<form action='' method='POST'>
+	{{form.hidden_tag()}}
+	<p>
+		{{form.username.label}}<br>
+		{{form.username(size=32)}}
+		{% for error in form.username.errors %}
+		<span>
+			<ul>{{error}}</ul>
+		</span>
+		{% endfor %}
+	</p>
+
+	<p>
+		{{form.password.label}}<br>
+		{{form.password(size=32)}}
+		{% for error in form.password.errors %}
+		<span>
+			<ul>{{error}}</ul>
+		</span>
+		{% endfor %}
+	</p>
+	<p>
+		{{form.remember_me()}}
+		{{form.remember_me.label}}
+	</p>
+	<p>
+		{{form.submit()}}
+	</p>
+</form>
+#}
+
+<div class="row">
+	<div class="col-md-4">
+		{{ wtf.quick_form(form) }}
+	</div>
+</div>
+
+
+<p><a href="{{url_for('forgot_password')}}">Forgot Password?</a></p>
+{% endblock app_content%}
